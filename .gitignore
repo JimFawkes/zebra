@@ -105,3 +105,6 @@ venv.bak/
 
 .DS_STORE
 .vscode/
+data/
+logs/
+ml_models/
