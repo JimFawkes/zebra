@@ -1,0 +1,57 @@
+pytz==2018.9  # https://github.com/stub42/pytz
+python-slugify==2.0.1  # https://github.com/un33k/python-slugify
+Pillow==5.4.1  # https://github.com/python-pillow/Pillow
+argon2-cffi==19.1.0  # https://github.com/hynek/argon2_cffi
+redis>=2.10.6, < 3  # pyup: < 3 # https://github.com/antirez/redis
+celery==4.2.1  # pyup: < 5.0  # https://github.com/celery/celery
+flower==0.9.2  # https://github.com/mher/flower
+Cython==0.29.6
+loguru==0.2.5
+
+# Django
+# ------------------------------------------------------------------------------
+django==2.1.7  # pyup: < 2.1  # https://www.djangoproject.com/
+django-environ==0.4.5  # https://github.com/joke2k/django-environ
+django-model-utils==3.1.2  # https://github.com/jazzband/django-model-utils
+django-allauth==0.38.0  # https://github.com/pennersr/django-allauth
+django-crispy-forms==1.7.2  # https://github.com/django-crispy-forms/django-crispy-forms
+django-redis==4.10.0  # https://github.com/niwinz/django-redis
+
+# Django REST Framework
+# djangorestframework==3.9.1  # https://github.com/encode/django-rest-framework
+# coreapi==2.3.3  # https://github.com/core-api/python-client
+
+# Data-Science
+# ------------------------------------------------------------------------------
+numpy==1.16.1
+pandas==0.24.1
+matplotlib==3.0.2
+nltk==3.4
+plotly==3.6.0
+scikit-learn==0.20.2
+scipy==1.2.0
+seaborn==0.9.0
+scikit-learn==0.20.2
+spacy==2.0.18
+tensorflow==1.12.0
+bokeh==1.0.4
+gensim==3.7.1
+
+
+
+ipython==7.2.0
+
+Keras==2.2.4
+opencv-python==4.0.0.21
+
+# Admin
+# ------------------------------------------------------------------------------
+boto3==1.9.86
+
+
+# Zebra
+# ------------------------------------------------------------------------------
+av==6.1.2
+pafy==0.5.4
+youtube-dl==2019.3.1
+
