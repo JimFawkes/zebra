@@ -1,21 +1,33 @@
-FROM python:3.6-alpine
+FROM python:3.6-stretch
+# FROM petronetto/docker-python-deep-learning
 
 ENV PYTHONUNBUFFERED 1
 
-RUN apk update \
-  # psycopg2 dependencies
-  && apk add --virtual build-deps gcc python3-dev musl-dev \
-  && apk add postgresql-dev \
-  # Pillow dependencies
-  && apk add jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev \
-  # CFFI dependencies
-  && apk add libffi-dev py-cffi \
-  # Translations dependencies
-  && apk add gettext \
-  # https://docs.djangoproject.com/en/dev/ref/django-admin/#dbshell
-  && apk add postgresql-client
+# RUN apk update \
+#     # psycopg2 dependencies
+#     && apk add --virtual build-deps gcc python3-dev musl-dev \
+#     && apk add postgresql-dev \
+#     # Pillow dependencies
+#     && apk add jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev \
+#     # CFFI dependencies
+#     && apk add libffi-dev py-cffi \
+#     # Translations dependencies
+#     && apk add gettext \
+#     # https://docs.djangoproject.com/en/dev/ref/django-admin/#dbshell
+#     && apk add postgresql-client
+
+# RUN apk add py-pip py-numpy@community py-scipy@community py-pandas@edge
+RUN apt-get update
+
+RUN apt-get install -y ffmpeg apt-utils
+
+# RUN echo deb http://www.deb-multimedia.org testing main non-free \
+#     >>/etc/apt/sources.list
+#
 
 # Requirements are installed here to ensure they will be cached.
+RUN pip install --upgrade pip
+
 COPY ./requirements /requirements
 RUN pip install -r /requirements/local.txt
 

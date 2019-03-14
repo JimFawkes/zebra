@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 volumes:
   local_postgres_data: {}
@@ -41,7 +41,7 @@ services:
     depends_on:
       - redis
       - postgres
-      
+
     ports: []
     command: /start-celeryworker
 
@@ -51,13 +51,15 @@ services:
     depends_on:
       - redis
       - postgres
-      
+
     ports: []
     command: /start-celerybeat
 
   flower:
     <<: *django
     image: zebra_local_flower
+    depends_on:
+      - redis
     ports:
       - "5555:5555"
     command: /start-flower
