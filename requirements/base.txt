@@ -27,7 +27,7 @@ django-storages==1.7.1  # https://github.com/jschneier/django-storages
 
 # Data-Science
 # ------------------------------------------------------------------------------
-numpy==1.21.0
+numpy==1.22.0
 pandas==0.24.1
 matplotlib==3.0.2
 nltk==3.6.6
